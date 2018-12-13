@@ -1,0 +1,13 @@
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\bin\Debug\Mapa.exe.config
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\bin\Debug\Mapa.exe
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\bin\Debug\Mapa.pdb
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\bin\Debug\GMap.NET.Core.dll
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.csprojAssemblyReference.cache
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.Form1.resources
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.Properties.Resources.resources
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.csproj.GenerateResource.cache
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.csproj.CoreCompileInputs.cache
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.csproj.CopyComplete
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.exe
+C:\Users\mitoo\Documents\Proyecto Mapa\Mapa\Mapa\obj\Debug\Mapa.pdb
