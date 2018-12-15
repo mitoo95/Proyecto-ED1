@@ -7,17 +7,11 @@
 using namespace std;
 
 
-MapaBack::MapaBack() {
+MapaBack::MapaBack(){
 
 }
 
-void MapaBack::HolaWorld() {
-
-	cout << "Hello World!!\n";
-
-}
-
-void MapaBack::CrearPuntostxt(int id, char *nombre, double latx, double lony) {
+void MapaBack::CrearPuntostxt(int id, char *nombre, double latx, double lony){
 
 	ofstream ArchivoPuntos("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\Puntos.txt", ios::app);
 
@@ -30,7 +24,7 @@ void MapaBack::CrearPuntostxt(int id, char *nombre, double latx, double lony) {
 
 }
 
-void MapaBack::CrearRutastxt(int id, int idP1, int idP2) {
+void MapaBack::CrearRutastxt(int idP1, int idP2){
 
 	ofstream ArchivoRutas("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\Rutas.txt", ios::app);
 
@@ -38,7 +32,7 @@ void MapaBack::CrearRutastxt(int id, int idP1, int idP2) {
 		return;
 	}
 
-	ArchivoRutas << id << "|" << idP1 << "|" << idP2 << "\n";
+	ArchivoRutas << idP1 << "|" << idP2 << "\n";
 	ArchivoRutas.close();
 
 }

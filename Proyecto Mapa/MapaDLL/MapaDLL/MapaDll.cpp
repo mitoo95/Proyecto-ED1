@@ -4,7 +4,7 @@
 
 extern "C" {
 
-	__declspec(dllexport) void DisplayHelloFromDLL(int id, char* nombre, double latx, double lony) {
+	__declspec(dllexport) void CrearPuntosDLL(int id, char* nombre, double latx, double lony) {
 		
 		MapaBack gm;
 		gm.CrearPuntostxt(id, nombre, latx, lony);

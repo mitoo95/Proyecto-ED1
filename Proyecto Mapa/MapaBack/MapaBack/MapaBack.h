@@ -10,8 +10,7 @@ public:
 	MapaBack();
 
 	void CrearPuntostxt(int id, char* nombre, double latx, double lony);
-	void HolaWorld();
-	void CrearRutastxt(int id, int idP1, int idP2);
+	void CrearRutastxt(int idP1, int idP2);
 	void LeerPuntostxt(char* buff, int psc);
 	void LeerRutastxt(char* buff, int id);
 	void EliminarPuntotxt(int id);
