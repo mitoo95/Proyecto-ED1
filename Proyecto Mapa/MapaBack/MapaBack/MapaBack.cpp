@@ -12,7 +12,7 @@ MapaBack::MapaBack(){
 
 }
 
-void MapaBack::CrearPuntostxt(int id, char *nombre, double latx, double lony){
+void MapaBack::CrearPuntostxt(char* id, char* nombre, double latx, double lony){
 
 	ofstream ArchivoPuntos("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\Puntos.txt", ios::app);
 
@@ -25,7 +25,7 @@ void MapaBack::CrearPuntostxt(int id, char *nombre, double latx, double lony){
 
 }
 
-void MapaBack::CrearRutastxt(int idP1, int idP2){
+void MapaBack::CrearRutastxt(char* origen, char* destino){
 
 	ofstream ArchivoRutas("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\Rutas.txt", ios::app);
 
@@ -33,7 +33,7 @@ void MapaBack::CrearRutastxt(int idP1, int idP2){
 		return;
 	}
 
-	ArchivoRutas << idP1 << "|" << idP2 << "\n";
+	ArchivoRutas << origen << "|" << destino << "\n";
 	ArchivoRutas.close();
 
 }

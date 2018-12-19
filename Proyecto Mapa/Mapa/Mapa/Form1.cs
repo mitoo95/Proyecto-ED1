@@ -21,19 +21,19 @@ namespace Mapa{
 
     public partial class Form1 : Form{
 
-        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
-        public static extern void CrearPuntosDLL(int id, string nombre, double latx, double lony);
+        [DllImport("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll", CallingConvention = CallingConvention.StdCall)]
+        public static extern void CrearPuntosDLL(string id, string nombre, double latx, double lony);
 
-        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
-        public static extern void CrearRutasDLL(int idP1, int idP2);
+        [DllImport("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll", CallingConvention = CallingConvention.StdCall)]
+        public static extern void CrearRutasDLL(string idP1, string idP2);
 
-        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        [DllImport("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll", CallingConvention = CallingConvention.StdCall)]
         public static extern void LeerPuntosDLL(string buff, int id);
 
-        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        [DllImport("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll", CallingConvention = CallingConvention.StdCall)]
         public static extern void LeerRutasDLL(string buff, int id);
 
-        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        [DllImport("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll", CallingConvention = CallingConvention.StdCall)]
         public static extern bool BuscarPuntosDLL();
 
         GMarkerGoogle marker;
@@ -143,8 +143,29 @@ namespace Mapa{
 
         private void btnGuardar_Click(object sender, EventArgs e){
 
-            CrearPuntosDLL();
+            CrearPuntosDLL(txtID.Text, txtDescripcion.Text, Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLongitud.Text));
+            MessageBox.Show("Guardado Exitosamente!");
+        }
 
+        private void btnRutas_Click(object sender, EventArgs e){
+
+            GMapOverlay Ruta = new GMapOverlay("Ruta");
+            List<PointLatLng> puntos = new List<PointLatLng>();
+            double lat, lon;
+            for(int filas = 0; filas < dataGridView1.Rows.Count; filas++){
+
+                lat = Convert.ToDouble(dataGridView1.Rows[filas].Cells[2].Value);
+                lon = Convert.ToDouble(dataGridView1.Rows[filas].Cells[3].Value);
+                puntos.Add(new PointLatLng(lat, lon));
+
+            }
+
+            GMapRoute PuntosRuta = new GMapRoute(puntos, "Ruta");
+            Ruta.Routes.Add(PuntosRuta);
+            gMapControl1.Overlays.Add(Ruta);
+
+            gMapControl1.Zoom = gMapControl1.Zoom + 1;
+            gMapControl1.Zoom = gMapControl1.Zoom - 1;
         }
     }
 }

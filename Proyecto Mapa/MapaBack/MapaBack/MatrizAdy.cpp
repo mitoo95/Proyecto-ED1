@@ -1,7 +1,7 @@
 #include "MatrizAdy.h"
 
 MatrizAdy::MatrizAdy(int n) {
-	
+
 	this->n = n;
 	visited = new bool[n];
 	adj = new int*[n];
@@ -17,14 +17,14 @@ MatrizAdy::MatrizAdy(int n) {
 
 }
 
-void MatrizAdy::add_edge(int origin, int destin) {
+void MatrizAdy::add_edge(int origen, int destino) {
 
-	if (origin > n || destin > n || origin < 0 || destin < 0) {
+	if (origen > n || destino > n || origen < 0 || destino < 0) {
 		cout << "Invalid edge!\n";
 	}
 
 	else {
-		adj[origin - 1][destin - 1] = 1;
+		adj[origen - 1][destino - 1] = 1;
 	}
 
 }
@@ -33,10 +33,10 @@ void MatrizAdy::display() {
 
 	int i, j;
 	for (i = 0; i < n; i++) {
-
-		for (j = 0; j < n; j++) {
-			cout << adj[i][j] << "  ";
+		for (j = 0; j < n; i++) {
+			cout << adj[i][j] << "	";
 		}
 		cout << endl;
 	}
+
 }

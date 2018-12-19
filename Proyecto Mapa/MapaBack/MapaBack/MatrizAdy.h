@@ -13,7 +13,7 @@ class MatrizAdy {
 public:
 	
 	MatrizAdy(int n);
-	void add_edge(int origin, int destin);
+	void add_edge(int origen, int destino);
 	void display();
 
 };
