@@ -115,13 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Graph.h" />
     <ClInclude Include="MapaBack.h" />
+    <ClInclude Include="MatrizAdy.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapaBack.cpp" />
-    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="MatrizAdy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

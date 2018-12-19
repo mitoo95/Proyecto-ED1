@@ -13,12 +13,7 @@ public:
 	void CrearRutastxt(int idP1, int idP2);
 	void LeerPuntostxt(char* buff, int psc);
 	void LeerRutastxt(char* buff, int id);
-	void EliminarPuntotxt(int id);
-	void EliminarRutatxt(int id);
-	void BuscarPunto(int id); // aux de crearruta
-
-
-
+	int BuscarPunto(int buscando); // aux de crearruta
 
 private:
 	int id;

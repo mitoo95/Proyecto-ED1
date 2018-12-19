@@ -1,4 +1,5 @@
 #include "MapaBack.h"
+#include "MatrizAdy.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,7 +16,7 @@ void MapaBack::CrearPuntostxt(int id, char *nombre, double latx, double lony){
 
 	ofstream ArchivoPuntos("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\Puntos.txt", ios::app);
 
-	if (!ArchivoPuntos) {
+	if (!ArchivoPuntos){
 		return;
 	}
 
@@ -89,20 +90,26 @@ void MapaBack::LeerRutastxt(char* buff, int id) {
 
 }
 
-void MapaBack::EliminarPuntotxt(int id) {
+int MapaBack::BuscarPunto(int buscando) {
 
+	ifstream ArchivoPuntos("C:\\Users\\mitoo\\Documents\\Proyecto Mapa\\Puntos.txt", ios::in);
 
+	if (!ArchivoPuntos)
+	{
+		return -1;
+	}
 
-}
+	ArchivoPuntos.seekg(0, ios::beg);
 
-void MapaBack::EliminarRutatxt(int id) {
+	while (ArchivoPuntos >> id)
+	{
+		if (buscando == id)
+		{
+			ArchivoPuntos.close();
+			return id;
+		}
+	}
 
-
-
-}
-
-void MapaBack::BuscarPunto(int id) {
-
-
-
+	ArchivoPuntos.close();
+	return -1;
 }

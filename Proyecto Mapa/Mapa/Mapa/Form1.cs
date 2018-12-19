@@ -8,15 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
 
 using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 
+
+
 namespace Mapa{
 
     public partial class Form1 : Form{
+
+        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        public static extern void CrearPuntosDLL(int id, string nombre, double latx, double lony);
+
+        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        public static extern void CrearRutasDLL(int idP1, int idP2);
+
+        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        public static extern void LeerPuntosDLL(string buff, int id);
+
+        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        public static extern void LeerRutasDLL(string buff, int id);
+
+        [DllImport("C: \\Users\\mitoo\\Documents\\Proyecto Mapa\\MapaDLL\\Debug\\MapaDLL.dll")]
+        public static extern bool BuscarPuntosDLL();
 
         GMarkerGoogle marker;
         GMapOverlay markerOverlay;
@@ -123,9 +141,10 @@ namespace Mapa{
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            //Boton guardar que debe llamar una funcion del backend
+        private void btnGuardar_Click(object sender, EventArgs e){
+
+            CrearPuntosDLL();
+
         }
     }
 }

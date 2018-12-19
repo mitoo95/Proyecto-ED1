@@ -41,7 +41,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnRutas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,21 +189,21 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "ID";
             // 
-            // btnCargar
+            // btnRutas
             // 
-            this.btnCargar.Location = new System.Drawing.Point(1009, 35);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(89, 42);
-            this.btnCargar.TabIndex = 13;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnRutas.Location = new System.Drawing.Point(1009, 35);
+            this.btnRutas.Name = "btnRutas";
+            this.btnRutas.Size = new System.Drawing.Size(89, 42);
+            this.btnRutas.TabIndex = 13;
+            this.btnRutas.Text = "Rutas";
+            this.btnRutas.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 528);
-            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.btnRutas);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnGuardar);
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnRutas;
     }
 }
 

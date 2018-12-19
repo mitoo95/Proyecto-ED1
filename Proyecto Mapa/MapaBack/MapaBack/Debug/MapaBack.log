@@ -1,2 +1,5 @@
-﻿  main.cpp
-  MapaBack.vcxproj -> C:\Users\mitoo\Documents\Proyecto Mapa\MapaBack\Debug\MapaBack.exe
+﻿  MapaBack.cpp
+c:\users\mitoo\documents\proyecto mapa\mapaback\mapaback\mapaback.cpp(99): error C2561: 'MapaBack::BuscarPunto': function must return a value
+  c:\users\mitoo\documents\proyecto mapa\mapaback\mapaback\mapaback.cpp(93): note: see declaration of 'MapaBack::BuscarPunto'
+  main.cpp
+  Generating Code...
